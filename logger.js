@@ -2,8 +2,8 @@ var Logger = function () {
 
     var private_log = function (action, data) {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("post", "https://log.nalrcs.org/" + action);
-        xmlHttp.send(data);
+        xmlHttp.open("post", "https://log.nalrcs.org/server/" + action);
+        xmlHttp.send(JSON.stringify(data));
     };
 
     return {
